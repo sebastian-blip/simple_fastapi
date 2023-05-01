@@ -6,8 +6,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Own libraries
-from config import Settings, get_settings
-from routers.datasets_info.info_dataset import data_info_router
+from app.config import Settings, get_settings
+from app.routers.datasets_info.info_dataset import data_info_router
 
 
 app = FastAPI(

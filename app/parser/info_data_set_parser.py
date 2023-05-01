@@ -1,6 +1,6 @@
 from fastapi import HTTPException
 
-from metadata.tipo_arch import TipoArch
+from app.metadata.tipo_arch import TipoArch
 
 
 def validar_tipo_log(tipo_arch: str) -> str:

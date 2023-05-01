@@ -1,8 +1,8 @@
 from fastapi import APIRouter, File, Response, UploadFile, Form
 from io import BytesIO
 
-from metadata.tipo_arch import TipoArch
-from parser.info_data_set_parser import validar_tipo_log
+from app.metadata.tipo_arch import TipoArch
+from app.parser.info_data_set_parser import validar_tipo_log
 
 
 data_info_router = APIRouter(prefix='/info_dataset', tags=['info_data_set'])
