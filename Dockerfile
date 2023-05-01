@@ -1,6 +1,8 @@
-FROM python:3.9
 #
-WORKDIR /simple_fastapi
+FROM python:3.9
+
+#
+WORKDIR /code
 
 #
 COPY ./requirements.txt /simple_fastapi/requirements.txt
@@ -9,7 +11,7 @@ COPY ./requirements.txt /simple_fastapi/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /simple_fastapi/requirements.txt
 
 #
-COPY ./simple_fastapi /simple_fastapi
+COPY ./app /simple_fastapi/app
 
 #
-CMD ["uvicorn", "simple_fastapi.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
