@@ -2,7 +2,7 @@
 FROM python:3.9
 
 #
-WORKDIR /code
+WORKDIR /simple_fastapi
 
 #
 COPY ./requirements.txt /simple_fastapi/requirements.txt
